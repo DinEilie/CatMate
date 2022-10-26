@@ -1,22 +1,33 @@
 /**************************************** Tag Selectors ***************************************/
-h1 {
+h1, h2, h3, body {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: 3.5rem;
+}
+
+h1, h2 {
   line-height: 1.5;
 }
 
-h3 {
-  font-family: 'Montserrat' , sans-serif;
+h1 {
+  font-weight: 900;
+  font-size: 3.5rem;
+}
+
+h2, h3 {
   font-weight: bold;
 }
 
-body {
-  font-family: 'Montserrat' , sans-serif;
+h2 {
+  font-size: 2.5rem;
 }
+
+
 /**************************************** Class Selectors *************************************/
 .container-fluid {
-  padding: 3% 12%;
+  padding: 6% 12%;
+}
+
+#footer .container-fluid {
+  padding: 1% 12%;
 }
 
 .navbar {
@@ -42,12 +53,38 @@ body {
 }
 
 .title-image {
-  width: 55%;
+  width: 13%;
+  position: absolute;
+  transform: rotate(25deg);
 }
 
-.rotate-15 {
-  transform: rotate(15deg);
+@media (max-width: 1957px) {
+  .title-image {
+    width: 15%;
+    position: absolute;
+    transform: rotate(0deg);
+  }
 }
+
+@media (max-width: 1183px){
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 991px) {
+  .title-info {
+    text-align: center;
+  }
+
+  .title-image {
+    width: 30%;
+    position: static;
+    transform: rotate(0deg);
+  }
+}
+
 
 .icon {
   color: rgb(210, 141, 30);
@@ -58,4 +95,33 @@ body {
   color: rgb(89, 63, 15);
   padding: 2% 0%;
 }
+
+.footer-icon {
+  padding: 2% 5px;
+  color: black;
+}
+
+.testimonials-images {
+  width: 20%;
+  border-radius: 15%;
+  margin: 12px;
+}
+
+.carousel-item {
+ padding: 0% 12%;
+}
+
+.press-images {
+  margin: 0% 2%;
+}
+
+.card {
+  margin: 5% 0%;
+}
+
+
 /**************************************** ID Selectors ****************************************/
+#features {
+  z-index: 1;
+  position: relative;
+}
