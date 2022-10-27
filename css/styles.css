@@ -23,7 +23,18 @@ h2 {
 
 /**************************************** Class Selectors *************************************/
 .container-fluid {
-  padding: 6% 12%;
+  padding: 8% 12%;
+}
+
+#navbarMap .container-fluid{
+  padding: 0% 5%;
+}
+
+#title .container-fluid{
+  padding-bottom: 3.5%;
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-top: 15%;
 }
 
 #footer .container-fluid {
@@ -31,17 +42,23 @@ h2 {
 }
 
 .navbar {
-  padding-bottom: 2.5rem;
+  padding-bottom: 2rem;
 }
 
 .nav-item {
-  padding: 0% 20px;
+  font-size: 1.1rem;
+  margin: 1% 50px;
 }
 
 .navbar-brand{
   font-family: 'Ubuntu', sans-serif;
   font-size: 3rem;
   font-weight: bold;
+}
+
+.banner-img {
+  filter: brightness(0) invert(1);
+  width: 10%;
 }
 
 .feature-box {
@@ -55,10 +72,81 @@ h2 {
 .title-image {
   width: 13%;
   position: absolute;
-  transform: rotate(25deg);
+  transform: rotate(0deg);
 }
 
-@media (max-width: 1957px) {
+/* Mobile & Tablet size */
+@media (max-width: 980px) {
+  .title-image {
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    transform: rotate(0deg);
+  }
+
+  .banner-img {
+    filter: brightness(0) invert(1);
+    width: 10%;
+  }
+
+  .navbar-brand{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 5rem;
+    font-weight: bold;
+    width: 85%;
+    margin: 0% 0%;
+  }
+
+  #navbarMap .container-fluid{
+    padding: 0% 5%;
+  }
+
+  #title .container-fluid{
+    padding-bottom: 70%;
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-top: 40%;
+  }
+
+  #title h1{
+    font-size: 5rem;
+    line-height: 1.2;
+  }
+
+  .navbar-toggler {
+    width: 12%;
+    height: 64px;
+    padding: 0% 0%;
+  }
+
+  .nav-item {
+    font-size: 2.5rem;
+    padding: 1% 20px;
+  }
+
+  #title .btn-group {
+    text-align: center;
+    width: 85%;
+    height: 80px;
+  }
+
+  #title .btn{
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+}
+
+/* Laptop Size */
+@media (min-width: 1024px) {
+  .title-image {
+    width: 25%;
+    position: absolute;
+    transform: rotate(0deg);
+  }
+}
+
+/* Wide Screen Size */
+@media (min-width: 1440px) {
   .title-image {
     width: 15%;
     position: absolute;
@@ -66,25 +154,23 @@ h2 {
   }
 }
 
-@media (max-width: 1183px){
-  h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-  }
-}
-
-@media (max-width: 991px) {
-  .title-info {
-    text-align: center;
-  }
-
+/* 4K Screen Size */
+@media (min-width: 2560px) {
   .title-image {
-    width: 30%;
-    position: static;
-    transform: rotate(0deg);
+    width: 15%;
+    position: absolute;
+    transform: rotate(-23deg);
+    right: 30%;
+    top: 15%;
+  }
+
+  #title .container-fluid{
+    padding-bottom: 10%;
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-top: 15%;
   }
 }
-
 
 .icon {
   color: rgb(210, 141, 30);
@@ -124,4 +210,10 @@ h2 {
 #features {
   z-index: 1;
   position: relative;
+}
+
+#navbarMap {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
 }
